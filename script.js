@@ -74,7 +74,7 @@ function uppercase() {
 
 var students = [];
 var grades = [];
-var stu2, stu1, avg, sum1 = 0,mn;
+var stu2, stu1, avg, sum1 = 0,mn,lo,comp;
 
 function pushgrade() 
 {
@@ -89,12 +89,20 @@ function pushgrade()
 
 function getavg()
 {
-    for (mn = 0; mn < grades.length; mn++) {
+    for (mn = 0; mn < grades.length; mn++) 
+    {
         sum1 = sum1 + grades[mn];
-
     }
-    avg = sum1/(grades.length) ;
-    console.log(avg);
+    avg = sum1 /(grades.length);
+    lo = avg.toFixed(2);
+    avg = "the average of all grades is : "+ lo ;
+    document.getElementById("prod3").innerHTML = avg;
+    for (comp=0;comp<grades.length;comp++)
+    {
+    	if (grades[compare]>=0 && grades[compare]<=60 )
+    	{
+    		alert("F");
+    	}
+    }
 
-    //document.getElementById("prod3").innerHTML = avg;
 }
